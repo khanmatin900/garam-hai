@@ -21,11 +21,16 @@
 
 <body>
   <div class="main-2">
-    <audio id="audio" src="/garam.mp3"></audio>
+    <audio src="/garam.mp3"></audio>
   </div>
+
 </body>
 <script>
-
+  const myDiv = document.querySelector(".main-2");
+  myDiv.addEventListener("canplaythrough", (event) => {
+    /* the audio is now playable; play it if permissions allow */
+    myDiv.play();
+  });
 </script>
 
 </html>
