@@ -7,7 +7,7 @@
   <title>garam hai</title>
 </head>
 <style>
-  .main-2 {
+  #bg-image {
     background-image: url(tea.jpeg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -16,21 +16,36 @@
     height: 300px;
     border-radius: 10px;
     border: 1px solid black;
+    cursor: pointer;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  audio {
+    display: none;
   }
 </style>
 
 <body>
-  <div class="main-2">
-    <audio src="/garam.mp3"></audio>
+
+  <h2>Click here to below Image...</h2>
+  <div id="bg-image">
+    <audio id="background-music" src="Audio.mp3" controls></audio>
   </div>
+
 
 </body>
 <script>
-  const myDiv = document.querySelector(".main-2");
-  myDiv.addEventListener("canplaythrough", (event) => {
-    /* the audio is now playable; play it if permissions allow */
-    myDiv.play();
-  });
+  document.getElementById('bg-image').addEventListener('click', function () {
+    var music = document.getElementById('background-music');
+    if (music.paused) {
+      music.play();
+    } else {
+      music.pause();
+    }
+  })
 </script>
 
 </html>
