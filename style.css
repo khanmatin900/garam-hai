@@ -1,0 +1,19 @@
+#bg-image {
+  background-image: url(tea.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+}
+
+audio {
+  display: none;
+}
